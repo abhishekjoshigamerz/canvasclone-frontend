@@ -1,10 +1,18 @@
-import "./App.css";
-
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebars/Sidebar";
+import Canvas from "./components/canvas/Canvas";
+import Footer from "./components/footer/footer";
 function App() {
   return (
     <>
-      <h1>React Canva Clone Application</h1>
-      <p>Creators : discord ID: @thesecrethero and @manojkumar4383</p>
+      <div className="flex flex-col h-screen">
+        <Header />
+        <div className="flex flex-grow">
+          <Sidebar />
+          <Canvas />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }
