@@ -8,7 +8,7 @@ import {
   Line,
 } from "fabric";
 import { useEffect, useRef } from "react";
-import { Square, Circle, Triangle, Hexagon, Star, Minus } from "lucide-react";
+import { Square, Circle, Triangle, Hexagon, Minus } from "lucide-react";
 
 interface CanvasBoardProps {
   activeMenu: string | null;
