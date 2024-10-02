@@ -7,8 +7,8 @@ import StockPhoto from "../sidebars/sidebartools/StockPhoto";
 
 const CanvasBoard = ({ activeMenu, setActiveMenu }: CanvasBoardProps) => {
   const { canvasRef, addShape, addText, updateTextStyle } = useFabricCanvas(
-    800,
-    600
+    700,
+    400
   );
 
   const renderSidebarContent = () => {

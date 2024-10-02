@@ -1,14 +1,5 @@
 import { useRef, useEffect, useCallback } from "react";
-import {
-  Canvas,
-  Circle,
-  Rect,
-  Triangle,
-  Polygon,
-  Line,
-  IText,
-  ITextProps,
-} from "fabric";
+import { Canvas, Circle, Rect, Triangle, Polygon, Line, IText } from "fabric";
 
 const useFabricCanvas = (width: number, height: number) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -94,7 +85,7 @@ const useFabricCanvas = (width: number, height: number) => {
     (textType: string) => {
       if (!fabricCanvasRef.current) return;
 
-      let textOptions: ITextOptions = {
+      let textOptions: Partial<IText> = {
         left: Math.random() * (width - 100),
         top: Math.random() * (height - 100),
         fontSize: 16,
@@ -125,10 +116,7 @@ const useFabricCanvas = (width: number, height: number) => {
           textOptions = { ...textOptions, text: "Text" };
       }
 
-      const text = new IText(
-        textOptions.text || "",
-        textOptions as Partial<ITextProps>
-      );
+      const text = new IText(textOptions.text || "", textOptions);
 
       fabricCanvasRef.current.add(text);
       fabricCanvasRef.current.setActiveObject(text);
