@@ -1,5 +1,4 @@
 import { AlignLeft, Heading1, Heading2 } from "lucide-react";
-import { TextSideBarProps } from "../../../interfaces/tools.interface";
 
 const TextSideBar = ({
   addText,
@@ -7,7 +6,7 @@ const TextSideBar = ({
 }: {
   addText: (text: string) => void;
   updateTextStyle: (style: string, value: unknown) => void;
-}): TextSideBarProps => {
+}) => {
   const textOptions = [
     { name: "Heading 1", icon: Heading1 },
     { name: "Heading 2", icon: Heading2 },
