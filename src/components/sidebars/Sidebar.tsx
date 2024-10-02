@@ -1,6 +1,5 @@
-interface SidebarProps {
-  onItemClick: (menuItem: string) => void;
-}
+import { SidebarProps } from "../../interfaces/sidebar.interfaces";
+
 const Sidebar = ({ onItemClick }: SidebarProps) => {
   return (
     <aside className="bg-gray-200 w-64 h-screen p-4">
@@ -16,27 +15,18 @@ const Sidebar = ({ onItemClick }: SidebarProps) => {
               Elements
             </a>
           </li>
-          <li>
-            <a
-              href="#"
-              className="block hover:bg-gray-300 p-2 rounded cursor-not-allowed pointer-events-none"
-            >
+          <li onClick={() => onItemClick("Text")}>
+            <a href="#" className="block hover:bg-gray-300 p-2 rounded ">
               Text
             </a>
           </li>
-          <li>
-            <a
-              href="#"
-              className="block hover:bg-gray-300 p-2 rounded cursor-not-allowed pointer-events-none"
-            >
+          <li onClick={() => onItemClick("Brand")}>
+            <a href="#" className="block hover:bg-gray-300 p-2 rounded ">
               Brand
             </a>
           </li>
-          <li>
-            <a
-              href="#"
-              className="block hover:bg-gray-300 p-2 rounded cursor-not-allowed pointer-events-none"
-            >
+          <li onClick={() => onItemClick("StockPhoto")}>
+            <a href="#" className="block hover:bg-gray-300 p-2 rounded ">
               Stock Photos
             </a>
           </li>

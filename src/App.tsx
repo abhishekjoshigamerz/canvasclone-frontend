@@ -8,7 +8,6 @@ function App() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const handleSideBarMenu = (menu: string) => {
     setActiveMenu(menu);
-    console.log(menu);
   };
 
   return (
@@ -16,10 +15,10 @@ function App() {
       <Header />
       <div className="flex flex-grow">
         <div className="w-64 flex-shrink-0">
-          <Sidebar onItemClick={handleSideBarMenu} />
+          <Sidebar onItemClick={handleSideBarMenu} activeMenu={activeMenu} />
         </div>
         <div className="flex-grow overflow-hidden">
-          <CanvasBoard activeMenu={activeMenu} />
+          <CanvasBoard activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         </div>
       </div>
       <Footer />
