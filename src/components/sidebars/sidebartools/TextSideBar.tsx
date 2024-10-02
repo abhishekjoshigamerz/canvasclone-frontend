@@ -1,4 +1,4 @@
-import { AlignLeft, Heading1, Heading2 } from "lucide-react";
+import { textOptions, fontOptions } from "../../../utils/text-helper";
 
 const TextSideBar = ({
   addText,
@@ -7,27 +7,6 @@ const TextSideBar = ({
   addText: (text: string) => void;
   updateTextStyle: (style: string, value: unknown) => void;
 }) => {
-  const textOptions = [
-    { name: "Heading 1", icon: Heading1 },
-    { name: "Heading 2", icon: Heading2 },
-    { name: "Paragraph", icon: AlignLeft },
-  ];
-
-  const fontOptions = [
-    "Arial",
-    "Helvetica",
-    "Times New Roman",
-    "Courier",
-    "Verdana",
-    "Georgia",
-    "Palatino",
-    "Garamond",
-    "Bookman",
-    "Comic Sans MS",
-    "Trebuchet MS",
-    "Arial Black",
-  ];
-
   return (
     <div className="p-4">
       <h3 className="text-lg font-semibold mb-4">Text Options</h3>
